@@ -1,0 +1,94 @@
+<view class="page">
+  <!--订单列表顶部-->
+  <view class="page_bg"></view>
+  <view class="order_panel_bar">
+    <view class="order-navbar">
+      <block wx:for="{{tabs}}">
+        <view id="{{index}}" class="order-navbar_item {{activeIndex == index ? 'order-bar_item_on' : ''}}" bindtap="tabClick">
+          <i-row>
+            <i-col span="8" offset="3" i-class="col-class">
+              <view class="order-navbar_title">{{item}}</view>
+            </i-col>
+            <i-col span="8" offset="5" i-class="col-class">
+              <view class="circle">
+                <text class="text_small_circle">2</text>
+              </view>
+            </i-col>
+          </i-row>
+        </view>
+      </block>
+      <view class="order-navbar_slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+  </view>
+  <!--订单列表-->
+  <view class="weui-tab__panel">
+    <!--配送订单-->
+    <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+      <view class="page_bd_midden">
+        <block wx:for="{{list}}" wx:key="id">
+          <view class="list_item" bindtap="detail" hover-class="kind-list_item-hd-hover">
+            <!--订单号下单时间-->
+            <view class="item_border_bottom">
+              <i-row>
+                <i-col span="10" offset="1" i-class="col-class">
+                  <text class="text_small">订单号：10203212</text>
+                </i-col>
+                <i-col span="12" offset="1" i-class="col-class">
+                  <text class="text_small">下单时间：2018-09-22</text>
+                </i-col>
+              </i-row>
+            </view>
+            <!--配送单订单内容-->
+            <view class="item_border_bottom item_line_height">
+              <i-row>
+                <i-col span="20" offset="1" i-class="col-class">
+                  <text class="text_big">外科手术台</text>
+                </i-col>
+              </i-row>
+              <i-row>
+                <i-col span="20" offset="1" i-class="col-class">
+                  <text class="text_midden_label">配送地址：</text>
+                  <text class="text_midden">成都武侯区武侯祠大街23号</text>
+                </i-col>
+              </i-row>
+              <i-row>
+                <i-col span="20" offset="1" i-class="col-class">
+                  <text class="text_midden_label">联系人：</text>
+                  <text class="text_midden">吴欣阳</text>
+                </i-col>
+              </i-row>
+              <i-row>
+                <i-col span="20" offset="1" i-class="col-class">
+                  <text class="text_midden_label">联系电话：</text>
+                  <text class="text_midden">13683435609</text>
+                </i-col>
+              </i-row>
+            </view>
+            <!--配送地址-->
+            <view class="item">
+              <view class="info_left item_line_distribution_height">
+                <i-row>
+                  <i-col span="8" offset="1" i-class="col-class">
+                    <text class="text_small">15:20:30</text>
+                  </i-col>
+                </i-row>
+                <i-row>
+                  <i-col span="22" offset="1" i-class="col-class">
+                    <text class="text_small">成都武侯区武侯祠大街23号</text>
+                  </i-col>
+                </i-row>
+              </view>
+               <view class="info_right">
+              <i-row> 
+                    <i-col span="24"  offset="" i-class="col-class">
+                    <i-button bind:click="handleConfirm" type="success" i-class="kind_btn_small">开始配送</i-button>
+                  </i-col>
+                </i-row>
+               </view> 
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

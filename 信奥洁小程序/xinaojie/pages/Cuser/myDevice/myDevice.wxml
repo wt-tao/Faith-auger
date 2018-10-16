@@ -1,0 +1,77 @@
+<!--##我的设备##-->
+
+<view class="page">
+  <!--扫描二维码-->
+  <view class="page_bg"></view>
+  <view class="kind_justify_display">
+    <view class="bg_icon"></view>
+    <view class="page_device">
+      <view class="kind_justify_display">
+        <view class="img_icon">
+        </view>
+      </view>
+      <view class="kind_justify_display">
+        <text class="text_midden item_line_height">扫描设备二维码</text>
+      </view>
+    </view>
+  </view>
+
+  <!--搜索-->
+  <view class="page_bd_search">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="icon-search_in-box" type="search" size="16"></icon>
+        <input type="text" class="search-bar_input" placeholder="输入关键词查询" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+      </view>
+    </view>
+  </view>
+
+  <!--列表-->
+  <view class="page_bd_spacing">
+    <block wx:for="{{list}}" wx:key="id">
+      <view class="list_item">
+        <!--设备名称-->
+        <view class="item_border_bottom">
+          <i-row>
+            <i-col span="20" offset="1" i-class="col-class">
+              <text class="text_big">飞利浦核磁共振仪器</text>
+            </i-col>
+          </i-row>
+        </view>
+        <!--设备内容-->
+        <view class="item_border_bottom">
+          <i-row>
+            <i-col span="20" offset="1" i-class="col-class">
+              <text class="text_midden">设备类型：P01515233</text>
+            </i-col>
+          </i-row>
+          <i-row>
+            <i-col span="20" offset="1" i-class="col-class">
+              <text class="text_midden">安装时间：2018-09-17</text>
+            </i-col>
+          </i-row>
+          <i-row>
+            <i-col span="20" offset="1" i-class="col-class">
+              <text class="text_midden">上次保养时间：2018-09-17</text>
+            </i-col>
+          </i-row>
+        </view>
+
+        <!--按钮-->
+        <view class="item item">
+          <i-row>
+            <i-col span="8" i-class="col-class">
+              <i-button bind:click="detail" i-class="kind_btn">详情</i-button>
+            </i-col>
+            <i-col span="8" i-class="col-class">
+              <i-button bind:click="repair" type="success" i-class="kind_btn">报修</i-button>
+            </i-col>
+            <i-col span="8" i-class="col-class">
+              <i-button bind:click="maintenance" type="primary" i-class="kind_btn">保养</i-button>
+            </i-col>
+          </i-row>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

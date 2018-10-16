@@ -1,0 +1,84 @@
+{
+  "pages": [
+    "pages/Cuser/technicalService/technicalService",
+    "pages/login/login",
+    "pages/warehouse/product/order/order",
+    "pages/technologyManager/order/order",
+    "pages/technologyManager/personnel/personnel",
+    "pages/Cuser/order/order",
+    "pages/technologyManager/orderFill/orderFill",
+    "pages/technology/order/order",
+    "pages/technology/accessoriesConfirm/accessoriesConfirm",
+    "pages/device/order/order",
+    "pages/Cuser/myDevice/myDevice",
+    
+    "pages/Cuser/maintenance/maintenance",
+    "pages/Cuser/myProfile/myProfile",
+    "pages/Cuser/repair/repair",
+    "pages/Cuser/deviceDetail/deviceDetail",
+    "pages/Cuser/myProfileInformation/myProfileInformation",
+    "pages/consult/consult",
+    "pages/fault/repairOrder/repairOrder",
+    "pages/fault/maintenanceOrderDetail/maintenanceOrderDetail",
+    "pages/fault/maintenanceOrder/maintenanceOrder",
+    "pages/fault/personnel/personnel",
+    "pages/fault/repairOrderDetail/repairOrderDetail",
+    "pages/fault/choice/choice",
+    "pages/warehouse/product/accessoriesRecycle/accessoriesRecycle",
+    "pages/warehouse/product/accessoriesEdit/accessoriesEdit",
+    "pages/warehouse/orthopaedic/accessoriesEdit/accessoriesEdit",
+    "pages/warehouse/orthopaedic/order/order",
+    "pages/warehouse/orthopaedic/personnel/personnel",
+    "pages/warehouse/orthopaedic/orderFill/orderFill",
+    "pages/warehouse/orthopaedic/accessoriesRecycle/accessoriesRecycle",
+    "pages/warehouse/orthopaedic/accessories/accessories",
+    "pages/distribution/order/order",
+    "pages/customer/myMaintenance/myMaintenance",
+    "pages/distribution/orderDetail/orderDetail",
+    "pages/device/maintenanceReport/maintenanceReport",
+    "pages/device/repairOrderDetail/repairOrderDetail",
+    "pages/device/maintenanceOrderDetail/maintenanceOrderDetail",
+    "pages/device/repairReport/repairReport",
+    "pages/device/archive/archive",
+    "pages/customer/main/main",
+    "pages/customer/maintenanceApply/maintenanceApply",
+    "pages/customer/repairApply/repairApply",
+    "pages/customer/myRepair/myRepair",
+    "pages/technology/serviceReport/serviceReport",
+    "pages/technology/accessoriesAdd/accessoriesAdd",
+    "pages/technology/accessories/accessories",
+    "pages/technology/orderFill/orderFill",
+    "pages/maintenance/orderDetail/orderDetail",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#0099FF",
+    "navigationBarTitleText": "信奥洁",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "backgroundColor": "#FFF",
+    "selectedColor": "#00CCFF",
+    "list": [
+      {
+        "iconPath": "image/shebei.png",
+        "selectedIconPath": "image/shebei.png",
+        "pagePath": "pages/Cuser/myDevice/myDevice",
+        "text": "我的设备"
+      },
+      {
+        "iconPath": "image/fuwu.png",
+        "selectedIconPath": "image/fuwu.png",
+        "pagePath": "pages/Cuser/technicalService/technicalService",
+        "text": "技术服务"
+      },
+      {
+        "iconPath": "image/my.png",
+        "selectedIconPath": "image/my.png",
+        "pagePath": "pages/Cuser/myProfile/myProfile",
+        "text": "我的资料"
+      }
+    ]
+  }
+}

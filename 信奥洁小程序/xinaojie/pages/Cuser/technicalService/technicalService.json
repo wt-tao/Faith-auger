@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#0099FF",
+  "navigationBarTitleText": "技术服务",
+  "usingComponents": {
+    "i-row": "../../../dist/row/index",
+    "i-col": "../../../dist/col/index"
+  }
+}

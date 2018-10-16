@@ -1,0 +1,163 @@
+/*配件清单编辑*/
+.page_bg {
+  width: 100%;
+  height: 150rpx;
+  background: #09f;
+}
+.page_bd_spacing {
+  position: absolute;
+  top: 20rpx;
+  left: 10rpx;
+  right: 10rpx;
+}
+/*清单列表*/
+.icon_add {
+  width: 70rpx;
+  height: 70rpx;
+  position: relative;
+  margin-top: 10rpx;
+}
+.item_tool {
+  width: 100%;
+  height:120rpx;
+  position: relative;
+  border-bottom: 1px solid #e0e0e0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.checkbox_img {
+  position: relative;
+  margin-top: -10rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+/*滑动*/
+.move_transform {
+   margin-right: 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: translateX(90px);
+  transform: translateX(90px);
+  margin-left: -90px;
+}
+.edit{
+  background-color:#09f;
+  width: 70px;
+  height:100rpx; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  -webkit-transform: translateX(90px);
+  transform: translateX(150px);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.del {
+  background-color:#09f;
+  width: 70px;
+  height:100rpx; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  -webkit-transform: translateX(90px);
+  transform: translateX(150px);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.touch-move-active .text_midden_label, .touch-move-active .del {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.touch-move-active .text_midden_label, .touch-move-active .edit {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+/*弹框*/
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+.dialog {
+  width: 90%;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  z-index: 9999;
+  background: #fff;
+  margin: -60rpx 35rpx;
+  border-radius: 15rpx;
+  padding-top: 50rpx;
+  padding-bottom:50rpx; 
+}
+
+.info_left{
+  width: 50%;
+  overflow: auto;
+  float: left;
+}
+.info_right{
+  width:50%;
+  overflow: auto;
+  float: left;
+}
+.dialog_content {
+  position: relative;
+  padding-bottom: 50rpx; 
+}
+.dialog_img{
+  width: 200rpx;
+  height: 200rpx;
+  position: relative;
+  margin-left:30rpx;
+  margin-top:20rpx;  
+}
+.form_border{
+ border: 1px solid #888888;
+}
+.page_bd_search{
+  position: relative;
+  margin:40rpx 20rpx 0 20rpx;
+}
+.dialog_list{
+  height:400rpx; 
+  position: relative;
+  margin-top: 40rpx;
+}
+.icon-search_in-box {
+  position: absolute;
+  left: 20rpx;
+  top: 25rpx;
+}
+.search-bar_input {
+  height: 80rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+}
+.number{
+  position:relative;
+  margin-top: 8rpx; 
+  border: 1px solid #e0e0e0;
+}
+.item_tool {
+  width: 100%;
+  height: 120rpx;
+  border-bottom: 1px solid #e0e0e0;
+  position: relative;
+  padding-top:20rpx; 
+}

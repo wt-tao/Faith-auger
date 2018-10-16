@@ -1,0 +1,29 @@
+<view class="page">
+<!--登录背景-->
+ <image src="../../image/loginbg.jpg" class="login_bg"></image>
+<!--登录框-->
+<view class="login_panel">
+<view class="login">
+    <view class="weui-cell weui-cell_input" style="padding-top:60rpx">
+      <view class="weui-cell__hd">
+       <image src="../../image/phone.png" class="icon"></image>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" style="margin-left:20rpx;" placeholder="请输入手机号"/>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input" style="padding-top:30rpx">
+      <view class="weui-cell__hd">
+        <image src="../../image/password.png" class="icon"></image>
+      </view>
+
+      <view class="weui-cell__bd">
+        <input class="weui-input" style="margin-left:20rpx;" placeholder="请输入密码" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input" style="padding-top:30rpx">
+        <button class="weui-btn" type="primary" style="width:80%" bindtap='login'>登录</button>
+    </view>
+</view>
+</view>
+</view>

@@ -1,0 +1,26 @@
+/*技术服务订单列表*/
+.bg_btn{
+position: absolute;
+top:45rpx;
+left:20rpx;
+right:20rpx;
+border-style: solid;
+border-color: #E0E0E0;
+width:95%;
+}
+
+/*搜索*/
+.page_bd_search {
+  position: absolute;
+  top: 200rpx;
+  left: 10rpx;
+  right: 10rpx;
+}
+
+/*订单列表*/
+.page_bd_midden {
+  position: absolute;
+  top: 300rpx;
+  left: 10rpx;
+  right: 10rpx;
+}

@@ -1,0 +1,70 @@
+/*技术服务-下订单*/
+.page_bg{
+  width: 100%;
+  height: 150rpx;
+  background: #0099FF 
+}
+.page_bd_spacing {
+  position: absolute;
+  top: 20rpx;
+  left: 10rpx;
+  right: 10rpx;
+}
+.cell_border {
+  border: 1px solid #e0e0e0;
+  width: 90%;
+  height: 90rpx;
+  position: relative;
+  margin-top: 15rpx;
+}
+
+.item_line_height {
+  line-height: 120rpx;
+}
+
+.textarea_panel {
+  width: 90%;
+  height: 180rpx;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  margin-top: 15rpx;
+  padding: 10px 15px;
+}
+
+/*技术服务-下订单-配件订单*/
+.page_bd_midden {
+  position: absolute;
+  top: 820rpx;
+  left: 10rpx;
+  right: 10rpx;
+}
+.item_tool {
+  width: 100%;
+  height: 120rpx;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.search_height {
+  height: 60rpx;
+}
+.number{
+  border: 1px solid #e0e0e0;
+}
+.search-bar {
+  position: relative;
+  padding-top:7rpx; 
+  height: 100rpx;
+  font-size: 32rpx;
+}
+.icon-search_in-box {
+  position: absolute;
+  left: 20rpx;
+  top: 15rpx;
+}
+.checkbox_img{
+  position:relative;
+  margin-top: -10rpx; 
+  width: 120rpx; 
+  height: 120rpx; 
+}
+

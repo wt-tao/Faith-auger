@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#0099FF",
+  "navigationBarTitleText": "人员分配",
+  "usingComponents": {
+    "i-row": "../../../dist/row/index",
+    "i-col": "../../../dist/col/index",
+    "i-button": "../../../dist/button/index"
+  }
+}

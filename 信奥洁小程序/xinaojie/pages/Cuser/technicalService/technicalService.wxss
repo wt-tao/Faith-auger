@@ -1,0 +1,25 @@
+/*##技术服务##*/
+.page_bd_spacing {
+  position: absolute;
+  top: 200rpx;
+  left: 10rpx;
+  right: 10rpx;
+}
+
+/*立即下单*/
+.bg_btn {
+  position: absolute;
+  top: 45rpx;
+  left: 20rpx;
+  right: 20rpx;
+  border-style: solid;
+  border-color: #e0e0e0;
+  width: 95%;
+}
+
+/*查看物流*/
+.btn_oper {
+  border-radius: 10rpx;
+  border: 0.5px solid #2894ff;
+  color: #2894ff;
+}

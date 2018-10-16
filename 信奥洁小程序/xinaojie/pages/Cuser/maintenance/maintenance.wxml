@@ -1,0 +1,55 @@
+<!--##保养##-->
+
+<view class="page">
+  <view class="page_bg"></view>
+  <!--内容-->
+  <view class="page_bd_spacing">
+    <block>
+      <view class="list_item">
+          <!--设备信息-->
+          <view class="item item_line_height ">
+            <i-row>
+              <i-col span="20"  i-class="col-class">
+                <text class="text_big">设备信息</text>
+              </i-col>
+            </i-row>
+              <i-row>
+                <i-col span="20"  i-class="col-class">
+                  <text class="text_midden_label">设备名称：</text>
+                  <text class="text_midden">飞利浦核磁共振仪</text>
+                </i-col>
+              </i-row>
+              <i-row>
+                <i-col span="20" i-class="col-class">
+                  <text decode="{{true}}" space="{{true}}" class="text_midden_label">型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</text>
+                  <text class="text_midden">P230-14532</text>
+                </i-col>
+              </i-row>
+              <i-row>
+                <i-col span="20"  i-class="col-class">
+                 <text class="text_midden_label">安装时间：</text>
+                  <text class="text_midden">2018-09-17</text>
+                </i-col>
+              </i-row>
+              <i-row>
+                <i-col span="20" i-class="col-class">
+                 <text class="text_midden_label">上次保养：</text>
+                  <text class="text_midden">2018-09-17</text>
+                </i-col>
+              </i-row>
+              <i-row>
+                <i-col span="20"  i-class="col-class">
+                  <text class="text_midden_label">保养周期：</text>
+                  <text class="text_midden">3个月</text>
+                </i-col>
+              </i-row>
+          </view>
+      </view>
+    </block>
+  </view>
+  
+  <!--保养申请-->
+  <view class="bottom_panel">
+    <i-button bind:click="handle" type="success" i-class="kind_btn">保养申请</i-button>
+  </view>
+</view>

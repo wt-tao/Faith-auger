@@ -1,0 +1,91 @@
+<!--##报修##-->
+
+<view class="page">
+  <view class="page_bg"></view>
+    <!--内容-->
+  <view class="page_bd_spacing">
+    <block>
+      <view class="list_item_bottom">
+        <!--设备参数-->
+        <view class="item_border_bottom item_line_height">
+          <i-row>
+            <i-col span="20" i-class="col-class">
+              <text class="text_big">设备信息</text>
+            </i-col>
+          </i-row>
+          <i-row>
+            <i-col span="20" i-class="col-class">
+              <text class="text_midden_label">设备名称：</text>
+              <text class="text_midden">飞利浦核磁共振仪</text>
+            </i-col>
+          </i-row>
+          <i-row>
+            <i-col span="20" i-class="col-class">
+              <text decode="{{true}}" space="{{true}}" class="text_midden_label">型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</text>
+              <text class="text_midden">P230-14532</text>
+            </i-col>
+          </i-row>
+          <i-row>
+            <i-col span="20" i-class="col-class">
+              <text class="text_midden_label">安装时间：</text>
+              <text class="text_midden">2018-09-17</text>
+            </i-col>
+          </i-row>
+          <i-row>
+            <i-col span="20" i-class="col-class">
+              <text class="text_midden_label">上次保养：</text>
+              <text class="text_midden">2018-09-17</text>
+            </i-col>
+          </i-row>
+        </view>
+
+        <!--故障描述-->
+        <view class="item_border_bottom">
+          <i-row>
+            <i-col span="20" i-class="col-class">
+              <text class="text_big">故障描述</text>
+            </i-col>
+          </i-row>
+          <view class="item" wx:for="{{describe}}">
+            <i-row>
+              <checkbox-group bindchange="change">
+                <i-col span="3" i-class="col-class">
+                  <checkbox value="{{item.name}}" checked="{{item.checked}}" color='orange'></checkbox>
+                </i-col>
+                <i-col span="18" offset="1" i-class="col-class">
+                  <view class=" text_midden_label">{{item.name}}</view>
+                </i-col>
+              </checkbox-group>
+            </i-row>
+          </view>
+        </view>
+
+        <!--图片上传-->
+        <view class="item">
+          <i-row>
+            <i-col span="6" i-class="col-class">
+              <text class="text_big">图片上传</text>
+            </i-col>
+          </i-row>
+          <view class="weui-uploader__bd">
+            <view class="weui-uploader__files" id="uploaderFiles">
+              <block wx:for="{{files}}" wx:key="*this">
+                <view class="weui-uploader__file uploader_img" bindtap="previewImage" id="{{item}}">
+                  <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                </view>
+              </block>
+            </view>
+            <view class="weui-uploader__input-box uploader_panel">
+              <view class="weui-uploader__input" bindtap="chooseImage"></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    
+    <!--报修提交-->
+    <view class="bottom_panel">
+      <i-button bind:click="handle" type="success" i-class="kind_btn">提交</i-button>
+    </view>
+  </view>
+</view>

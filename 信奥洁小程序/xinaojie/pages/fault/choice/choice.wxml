@@ -1,0 +1,113 @@
+<view class="page">
+  <!--选择配件顶部-->
+  <view class="page_bg"></view>
+  <view class="page_bd_first">
+    <view class="list_item">
+      <view class="item">
+        <i-row>
+          <i-col span="12"  i-class="col-class">
+            <text class="text_big">设备电路故障</text>
+          </i-col>
+          <i-col span="3" offset="9" i-class="col-class">
+            <image data-param="1" class="icon" src="{{isShowFrom1 ? '../../../image/jiantoushang.png' : '../../../image/jiantouxia.png'}}" bindtap="showFrom" />
+          </i-col>
+        </i-row>
+      </view>
+      <view class=" {{isShowFrom1 ? '' : 'kind-list_item-bd_show'}}">
+        <!--选择工具全选-->
+        <view class="item_tool" wx:if="{{!selectAll}}">
+          <i-row>
+            <i-col span="3" i-class="col-class selectAll">
+              <text class="text_midden_label">全选</text>
+            </i-col>
+            <i-col span="3" i-class="col-class">
+              <checkbox-group>
+                <checkbox value="" checked="{{item.checked}}" color='orange' bindtap='selectAll'></checkbox>
+              </checkbox-group>
+            </i-col>
+          </i-row>
+        </view>
+        <!--选择工具取消全选-->
+        <view class="kind_item_border" wx:if="{{selectAll}}">
+          <i-row>
+            <i-col span="6" i-class="col-class selectCancel">
+              <text class="text_midden_label">取消全选</text>
+            </i-col>
+            <i-col span="3" i-class="col-class">
+              <checkbox-group>
+                <checkbox value="" checked="{{selectAll}}" color='orange' bindtap='selectCancel'></checkbox>
+              </checkbox-group>
+            </i-col>
+          </i-row>
+        </view>
+        <!--选择工具-->
+        <view class="kind-list_item-hd " wx:for="{{tool}}">
+          <view class="item_tool">
+            <i-row>
+              <checkbox-group bindchange="change">
+                <i-col span="3" i-class="col-class">
+                  <image src="{{item.img}}" class="checkbox_img" />
+                </i-col>
+                <i-col span="8" offset="2" i-class="col-class">
+                  <text class=" text_midden_label">{{item.name}}</text>
+                </i-col>
+                <i-col span="4" offset="1" i-class="col-class">
+                  <input class="number"></input>
+                </i-col>
+                <i-col span="1" offset="1" i-class="col-class">
+                  <text class=" text_midden_label">个</text>
+                </i-col>
+                <i-col span="3" offset="1" i-class="col-class">
+                  <checkbox value="{{item.name}}" checked="{{item.checked}}" color='orange'></checkbox>
+                </i-col>
+              </checkbox-group>
+            </i-row>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!--设备驱动未安装-->
+  <view class="page_bd_second">
+    <view class="list_item">
+      <view class="item">
+        <i-row>
+          <i-col span="12"  i-class="col-class">
+            <text class="text_big">设备驱动未安装</text>
+          </i-col>
+          <i-col span="3" offset="9" i-class="col-class">
+            <image data-param="2" class="icon" src="{{isShowFrom2 ? '../../../image/jiantoushang.png' : '../../../image/jiantouxia.png'}}" bindtap="showFrom" />
+          </i-col>
+        </i-row>
+      </view>
+      <view class="{{isShowFrom2 ? '' : 'kind-list_item-bd_show'}}">
+        暂时无内容
+      </view>
+    </view>
+  </view>
+
+  <!--主机机械故障-->
+  <view class="page_bd_thrid">
+    <view class="list_item">
+      <view class="item">
+        <i-row>
+          <i-col span="12"  i-class="col-class">
+            <text class="text_big">主机机械故障</text>
+          </i-col>
+          <i-col span="3" offset="9" i-class="col-class">
+            <image data-param="3" class="icon" src="{{isShowFrom3 ? '../../../image/jiantoushang.png' : '../../../image/jiantouxia.png'}}" bindtap="showFrom" />
+          </i-col>
+        </i-row>
+      </view>
+      <view class="{{isShowFrom3 ? '' : 'kind-list_item-bd_show'}}">
+        暂时无内容
+      </view>
+    </view>
+  </view>
+
+  <!--选择配件底部-->
+  <view class="bottom_panel">
+    <i-button bind:click="distribution" type="success" i-class="kind_btn">分配人员</i-button>
+  </view>
+</view>

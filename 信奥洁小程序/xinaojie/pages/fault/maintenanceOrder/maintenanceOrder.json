@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#0099FF",
+  "navigationBarTitleText": "保养订单列表",
+  "usingComponents": {
+    "i-row": "../../../dist/row/index",
+    "i-col": "../../../dist/col/index",
+    "i-button": "../../../dist/button/index"
+  }
+}

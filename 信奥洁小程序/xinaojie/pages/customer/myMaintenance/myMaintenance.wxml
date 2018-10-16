@@ -1,0 +1,78 @@
+<view class="page">
+  <!--我的保养单-->
+  <view class="page_bg"></view>
+ <view class="page_bd_spacing"></view>
+
+  <!--搜索-->
+  <view class="page_bd_search">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="icon-search_in-box" type="search" size="16"></icon>
+        <input type="text" class="search-bar_input" placeholder="输入关键词查询" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+      </view>
+    </view>
+  </view>
+
+  <!--保养单内容-->
+  <view class="page_bd_midden">
+    <view class="customer_panel">
+      <block wx:for="{{list}}" wx:key="id">
+        <view class="list_item">
+          <!--保养单号下单时间-->
+          <view class="item_border_bottom">
+            <i-row>
+              <i-col span="10" offset="1" i-class="col-class">
+                <text class="text_small">订单号：10203212</text>
+              </i-col>
+              <i-col span="12" offset="1" i-class="col-class">
+                <text class="text_small">下单时间：2018-09-22</text>
+              </i-col>
+            </i-row>
+          </view>
+          <!--保养单名称,设备,地址-->
+          <view class="item_border_bottom item_line_height">
+            <i-row>
+              <i-col span="20" offset="1" i-class="col-class">
+                <text class="text_big">外科手术台</text>
+              </i-col>
+            </i-row>
+            <i-row>
+              <i-col span="20" offset="1" i-class="col-class">
+                <text class="text_midden_label">设备型号：</text>
+                <text class="text_midden">PO123232</text>
+              </i-col>
+              <i-col span="24" offset="1" i-class="col-class">
+                <text class="text_midden_label">设备地址：</text>
+                <text class="text_midden">成都武侯祠大街23号</text>
+              </i-col>
+            </i-row>
+          </view>
+          <!--保养单状态-->
+          <view class="item item_line_height">
+            <i-row>
+              <i-col span="20" offset="1" i-class="col-class">
+                <text class="text_midden">已完成</text>
+              </i-col>
+            </i-row>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!--我的保养单底部-->
+  <view class="customer_bottom_panel">
+   <view class="item_block item_hd" bindtap='main'>
+      <image class="bottom_img" src="../../../image/main.png" />
+      <view class="bottom_text">首页</view>
+    </view>
+    <view class="item_block item_hd" bindtap='myRepair'>
+      <image class="bottom_img"  src="../../../image/repair.png" />
+      <view class="bottom_text">我的维修单</view>
+    </view>
+    <view class="item_block item_hd" bindtap='myMaintenance'>
+      <image class="bottom_img" src="../../../image/baoyang1.png" />
+      <view class="bottom_text" style="color:#59BBEA;">我的保养单</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+/**登录背景图**/
+.login_bg{
+  width: 100%;
+  height: 550rpx;
+}
+/**登录框**/
+.login_panel{
+  display:flex; 
+  justify-content:center;
+}
+.login{
+  width:90%;
+  height:500rpx;
+  position: absolute;
+  top:400rpx;
+  background: #fff; 
+  border-radius:20rpx; 
+}
+.icon{
+  width: 70rpx;
+  height: 70rpx;
+}

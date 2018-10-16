@@ -1,0 +1,42 @@
+/*维修管理员订单列表顶部*/
+.page_bg{
+  width: 100%;
+  height: 150rpx;
+  background: #0099FF 
+}
+
+.order-navbar_title {
+  display: inline-block;
+  font-size: 15px;
+  width: 20rpx;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+.order-navbar_slider {
+  position: absolute;
+  content: " ";
+  left: 0;
+  bottom: 0;
+  width: 150px;
+  height: 3px;
+  background-color: #1aad19;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+
+/*维修管理员订单列表*/
+.page_bd_midden {
+  position: absolute;
+  top: 180rpx;
+  left: 10rpx;
+  right: 10rpx;
+}
+/* .kind-list_item-hd-hover{
+  height:230rpx; 
+  background-color:	#888888;
+} */
+
+

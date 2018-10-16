@@ -1,0 +1,135 @@
+<!--技术管理服务订单-->
+<view class="page">
+  <!--设备报修顶部-->
+  <view class="page_bg"></view>
+  <button class="weui-btn bg_btn" type="primary" bindtap='order'>立即下单</button>
+
+  <!--tabBar-->
+  <view class="order_panel_bar">
+    <view class="order-navbar">
+      <block wx:for="{{tabs}}">
+        <view id="{{index}}" class="order-navbar_item {{activeIndex == index ? 'order-bar_item_on' : ''}}" bindtap="tabClick">
+          <i-row>
+            <i-col span="8" offset="3" i-class="col-class">
+              <view class="order-navbar_title">{{item}}</view>
+            </i-col>
+            <i-col span="8" offset="5" i-class="col-class">
+              <view class="circle">
+                <text class="text_small_circle">2</text>
+              </view>
+            </i-col>
+          </i-row>
+        </view>
+      </block>
+      <view class="order-navbar_slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+  </view>
+
+  <!--搜索-->
+  <view class="page_bd_search">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="icon-search_in-box" type="search" size="16"></icon>
+        <input type="text" class="search-bar_input" placeholder="输入关键词查询" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+      </view>
+    </view>
+  </view>
+
+  <!--未分配-->
+  <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+    <!--订单内容-->
+    <view class="page_bd_midden">
+      <block wx:for="{{list}}" wx:key="id">
+        <view class="list_item" bindtap="detail">
+          <!--订单号下单时间-->
+          <view class="item_border_bottom">
+            <i-row>
+              <i-col span="10" offset="1" i-class="col-class">
+                <text class="text_small">订单号：10203212</text>
+              </i-col>
+              <i-col span="12" offset="1" i-class="col-class">
+                <text class="text_small">下单时间：2018-09-22</text>
+              </i-col>
+            </i-row>
+          </view>
+          <!--订单名称-->
+          <view class="item_border_bottom item_line_height">
+            <i-row>
+              <i-col span="20" offset="1" i-class="col-class">
+                <text class="text_big">外科手术台</text>
+              </i-col>
+            </i-row>
+            <i-row>
+              <i-col span="20" offset="1" i-class="col-class">
+                <text class="text_midden_label">设备型号：</text>
+                <text class="text_midden">PO123232</text>
+              </i-col>
+            </i-row>
+          </view>
+          <!--按钮-->
+          <view class="item item_line_height">
+            <i-row>
+              <i-col span="4" offset="1" i-class="col-class">
+                <text class="text_midden">进行中</text>
+              </i-col>
+              <i-col span="7" offset="2" i-class="col-class">
+                <i-button bind:click="distribution" type="primary" i-class="kind_btn_small_margin">分配人员</i-button>
+              </i-col>
+              <i-col span="7" offset="2" i-class="col-class">
+                <i-button bind:click="accessories" i-class="kind_btn_small_margin">详情</i-button>
+              </i-col>
+            </i-row>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!--已处理-->
+  <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+    <!--订单内容-->
+    <view class="page_bd_midden">
+      <block wx:for="{{list}}" wx:key="id">
+        <view class="list_item" bindtap="detail">
+          <!--订单号下单时间-->
+          <view class="item_border_bottom">
+            <i-row>
+              <i-col span="10" offset="1" i-class="col-class">
+                <text class="text_small">订单号：10203212</text>
+              </i-col>
+              <i-col span="12" offset="1" i-class="col-class">
+                <text class="text_small">下单时间：2018-09-22</text>
+              </i-col>
+            </i-row>
+          </view>
+          <!--订单名称-->
+          <view class="item_border_bottom item_line_height">
+            <i-row>
+              <i-col span="20" offset="1" i-class="col-class">
+                <text class="text_big">外科手术台</text>
+              </i-col>
+            </i-row>
+            <i-row>
+              <i-col span="20" offset="1" i-class="col-class">
+                <text class="text_midden_label">设备型号：</text>
+                <text class="text_midden">PO123232</text>
+              </i-col>
+            </i-row>
+          </view>
+          <!--按钮-->
+          <view class="item item_line_height">
+            <i-row>
+              <i-col span="8" offset="1" i-class="col-class">
+                <text class="text_midden">已处理</text>
+              </i-col>
+              <i-col span="7" offset="7" i-class="col-class">
+                <i-button bind:click="accessories" i-class="kind_btn_small_margin">详情</i-button>
+              </i-col>
+            </i-row>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+</view>

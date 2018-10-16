@@ -1,0 +1,227 @@
+<!--##设备详情##-->
+
+<view class="page">
+  <!--详情管理-->
+  <view class="page_bg"></view>
+  <view class="page_bd_spacing">
+    <block>
+      <view class="list_item">
+        <!--设备名称-->
+        <view class="item_border_bottom">
+          <i-row>
+            <i-col span="20" i-class="col-class">
+              <text class="text_big">爱康手术室消毒机</text>
+            </i-col>
+          </i-row>
+        </view>
+
+        <!--设备其它参数-->
+        <view class="item">
+          <i-row>
+            <i-col span="20"  i-class="col-class">
+              <text class="text_midden">设备类型：P01515233</text>
+            </i-col>
+          </i-row>
+          <i-row>
+            <i-col span="20" i-class="col-class">
+              <text class="text_midden">安装时间：2018-09-17</text>
+            </i-col>
+          </i-row>
+          <i-row>
+            <i-col span="20" i-class="col-class">
+              <text class="text_midden">上次保养时间：2018-09-17</text>
+            </i-col>
+          </i-row>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!--详情记录-->
+  <view class="page_bd_midden">
+    <view class="page_detail ">
+      <view class="weui-tab">
+        <view class="weui-navbar">
+          <block wx:for="{{tabs}}" wx:key="*this">
+            <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+              <view class="weui-navbar__title">{{item}}</view>
+            </view>
+          </block>
+          <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+        </view>
+        <view class="weui-tab__panel">
+ <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+          <view class="item" hidden="{{activeIndex != 0}}">
+            <i-row>
+              <i-col span="20" i-class="col-class">
+                <text class="text_midden">安装时间：2018-09-17</text>
+              </i-col>
+            </i-row>
+            <i-row>
+              <i-col span="20" i-class="col-class">
+                <text class="text_midden">安装人员：XXX</text>
+              </i-col>
+            </i-row>
+            <i-row>
+              <i-col span="20" i-class="col-class">
+                <text class="text_midden">安装过程：</text>
+              </i-col>
+            </i-row>
+          </view>
+
+          <!--维修记录-->
+          <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+            <!--维修列表-->
+            <view class="kind-list_item-hd " wx:for="{{list}}">
+              <view class="item_record">
+                <i-row>
+                  <i-col span="9" i-class="col-class">
+                    <view class=" text_small">时间：{{item.time}}</view>
+                  </i-col>
+                  <i-col span="7" offset="1" i-class="col-class">
+                    <view class=" text_small">人员：{{item.name}}</view>
+                  </i-col>
+                  <i-col span="6" offset="1" i-class="col-class">
+                    <button class=" mini-btn btn_evaluation" size="mini" bindtap='evaluationDialog'>评价</button>
+                  </i-col>
+                </i-row>
+              </view>
+            </view>
+
+            <!--故障描述-->
+            <view class="item">
+              <i-row>
+                <i-col span="20" i-class="col-class">
+                  <text class="text_big">故障描述</text>
+                </i-col>
+              </i-row>
+            </view>
+            <view class="kind-list_item-context">
+              <view class="text_midden">
+                儿童健康未来事关于家庭幸福和民族的未来。加强儿童医疗卫生服务</view>
+            </view>
+            <view class="img_panel">
+              <i-row>
+                <i-col span="7" offset="1" i-class="col-class">
+                  <image class="weui-uploader__img" src="../../../image/pic_160.png" mode="aspectFill" />
+                </i-col>
+                <i-col span="7" offset="1" i-class="col-class">
+                  <image class="weui-uploader__img" src="../../../image/pic_160.png" mode="aspectFill" />
+                </i-col>
+                <i-col span="7" offset="1" i-class="col-class">
+                  <image class="weui-uploader__img" src="../../../image/pic_160.png" mode="aspectFill" />
+                </i-col>
+              </i-row>
+            </view>
+
+            <!--维修描述-->
+            <view class="item">
+              <i-row>
+                <i-col span="20" i-class="col-class">
+                  <text class="text_big">维修描述</text>
+                </i-col>
+              </i-row>
+            </view>
+            <view class="kind-list_item-context">
+              <view class="text_midden">
+                儿童健康未来事关于家庭幸福和民族的未来。加强儿童医疗卫生服务</view>
+            </view>
+          </view>
+          
+          <!--保养记录-->
+          <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+            <!--保养列表-->
+            <view class="kind-list_item-hd " wx:for="{{list}}">
+              <view class="item_record">
+                <i-row>
+                  <i-col span="9" i-class="col-class">
+                    <view class=" text_small">时间：{{item.time}}</view>
+                  </i-col>
+                  <i-col span="7" offset="1" i-class="col-class">
+                    <view class=" text_small">人员：{{item.name}}</view>
+                  </i-col>
+                  <i-col span="6" offset="1" i-class="col-class">
+                    <button class=" mini-btn btn_evaluation" size="mini" bindtap='evaluationDialog'>评价</button>
+                  </i-col>
+                </i-row>
+              </view>
+            </view>
+
+             <!--保养描述-->
+            <view class="item">
+              <i-row>
+                <i-col span="20" i-class="col-class">
+                  <text class="text_big">保养描述</text>
+                </i-col>
+              </i-row>
+            </view>
+            <view class="kind-list_item-context">
+              <view class="text_midden">
+                儿童健康未来事关于家庭幸福和民族的未来。加强儿童医疗卫生服务</view>
+            </view>
+            <view class="img_panel">
+              <i-row>
+                <i-col span="7" offset="1" i-class="col-class">
+                  <image class="weui-uploader__img" src="../../../image/pic_160.png" mode="aspectFill" />
+                </i-col>
+                <i-col span="7" offset="1" i-class="col-class">
+                  <image class="weui-uploader__img" src="../../../image/pic_160.png" mode="aspectFill" />
+                </i-col>
+                <i-col span="7" offset="1" i-class="col-class">
+                  <image class="weui-uploader__img" src="../../../image/pic_160.png" mode="aspectFill" />
+                </i-col>
+              </i-row>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!--设备详情底部-->
+  <view class="bottom_panel">
+    <i-row>
+      <i-col span="10" offset="1" i-class="col-class">
+        <i-button bind:click="" type="success" i-class="kind_btn">报修</i-button>
+      </i-col>
+      <i-col span="10" offset="2" i-class="col-class">
+        <i-button bind:click="" type="primary" i-class="kind_btn">保养</i-button>
+      </i-col>
+    </i-row>
+  </view>
+</view>
+
+<!--评价弹框-->
+<view class="evaluation_mask" bindtap="hideModal" wx:if="{{showModal}}"></view>
+<view class="evaluation_dialog" wx:if="{{showModal}}">
+  <view class="text_big evaluation_title">你对本次维修服务评价</view>
+  <view class="evaluation_content">
+    <text class="text_midden">是否解决了故障？</text>
+    <i-row>
+      <radio-group bindchange="solveChange">
+        <label wx:for="{{solve}}">
+          <i-col span="8" i-class="col-class">
+            <radio value="{{item.name}}" checked="{{item.checked}}" color='orange'>
+              <text class="text_small">{{item.name}}</text>
+            </radio>
+          </i-col>
+        </label>
+      </radio-group>
+    </i-row>
+    <text class="text_midden">维修人员态度如何？</text>
+    <i-row>
+      <radio-group bindchange="attitudeChange">
+        <label wx:for="{{attitude}}">
+          <i-col span="8" i-class="col-class">
+            <radio value="{{item.name}}" checked="{{item.checked}}" color='orange'>
+              <text class="text_small">{{item.name}}</text>
+            </radio>
+          </i-col>
+        </label>
+      </radio-group>
+    </i-row>
+    <i-button bind:click="handleConfirm" type="success" i-class="repair">提交</i-button>
+  </view>
+</view>

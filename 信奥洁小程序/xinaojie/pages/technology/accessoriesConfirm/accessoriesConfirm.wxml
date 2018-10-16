@@ -1,0 +1,59 @@
+<view class="page">
+  <!--配件确认清单顶部-->
+  <view class="page_bg"></view>
+  <view class="page_bd_spacing">
+    <block>
+      <view class="list_item">
+        <!--订单号下单时间-->
+        <view class="item_border_bottom item_line_height">
+          <i-row>
+            <i-col span="10" offset="1" i-class="col-class">
+              <text class="text_small">订单号：10203212</text>
+            </i-col>
+            <i-col span="12" offset="1" i-class="col-class">
+              <text class="text_small">下单时间：2018-09-22</text>
+            </i-col>
+          </i-row>
+        </view>
+        <!--清单名称-->
+        <view class="item_border_bottom item_line_height">
+          <i-row>
+            <i-col span="20" offset="1" i-class="col-class">
+              <text class="text_big">外科手术台-报告</text>
+            </i-col>
+          </i-row>
+        </view>
+        <!--清单工具-->
+        <view class="item item_line_height">
+          <i-row>
+            <i-col span="20" offset="1" i-class="col-class">
+              <text class="text_big">配件清单</text>
+            </i-col>
+          </i-row>
+        </view>
+        <view class="list_item_bottom">
+          <view class="kind-list_item-hd " wx:for="{{tool}}">
+            <view class="item_tool">
+              <i-row>
+              <i-col span="3"  i-class="col-class">
+                    <image src="{{item.img}}" class="checkbox_img" />
+                  </i-col>
+                  <i-col span="8" offset="3" i-class="col-class">
+                    <text class=" text_midden_label">{{item.name}}</text>
+                  </i-col>
+                  <i-col span="4" offset="5" i-class="col-class">
+                    <text class=" text_midden_label">3个</text>
+                  </i-col> 
+              </i-row>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  
+ <!--确认收货-->
+    <view class="bottom_panel">
+        <i-button bind:click="" type="success" i-class="kind_btn">确认收货</i-button>
+    </view>
+</view>

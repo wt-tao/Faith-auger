@@ -1,0 +1,101 @@
+<view class="page">
+  <!--维修申请-->
+  <view class="page_bg"></view>
+  <view class="page_bd_spacing">
+    <block>
+      <view class="list_item_bottom">
+        <!--维修订单信息-->
+        <view class="item_border_bottom item_line_height">
+          <i-row>
+            <i-col span="20" i-class="col-class">
+              <text class="text_big">设备信息填写</text>
+            </i-col>
+          </i-row>
+          <i-row>
+            <i-col span="6" i-class="col-class">
+              <text class="text_midden_label item_line_height">设备名称：</text>
+            </i-col>
+            <i-col span="16" offset="1" i-class="col-class">
+              <view class="weui-cell weui-cell_input cell_border">
+                <view class="weui-cell__bd">
+                  <input class="weui-input text_midden_label" placeholder="请输入名称" />
+                </view>
+              </view>
+            </i-col>
+          </i-row>
+          <i-row>
+            <i-col span="6" i-class="col-class">
+              <text class="text_midden_label item_line_height">设备地址：</text>
+            </i-col>
+            <i-col span="16" offset="1" i-class="col-class">
+              <view class="weui-cell weui-cell_input cell_border">
+                <view class="weui-cell__bd">
+                  <input class="weui-input text_midden_label" placeholder="请输入设备地址" />
+                </view>
+              </view>
+            </i-col>
+          </i-row>
+          <i-row>
+            <i-col span="6" i-class="col-class">
+              <text class="text_midden_label item_line_height">设备型号：</text>
+            </i-col>
+            <i-col span="16" offset="1" i-class="col-class">
+              <view class="weui-cell weui-cell_input cell_border">
+                <view class="weui-cell__bd">
+                  <input class="weui-input text_midden_label" placeholder="请输入设备型号" />
+                </view>
+              </view>
+            </i-col>
+          </i-row>
+        </view>
+
+         <!--故障描述-->
+        <view class="item_border_bottom">
+         <i-row>
+            <i-col span="20" i-class="col-class">
+              <text class="text_big">故障描述</text>
+            </i-col>
+          </i-row>
+         <view class="item" wx:for="{{describe}}" >
+            <i-row>
+                <checkbox-group bindchange="change">
+                 <i-col span="3" i-class="col-class">
+                    <checkbox value="{{item.name}}" checked="{{item.checked}}" color='orange'></checkbox>
+                  </i-col>
+                  <i-col span="18" offset="1" i-class="col-class">
+                    <view class=" text_midden_label">{{item.name}}</view>
+                  </i-col>
+                </checkbox-group>
+            </i-row>
+            </view>
+        </view>
+
+         <!--图片上传-->
+        <view class="item">
+          <i-row>
+            <i-col span="20" i-class="col-class">
+              <text class="text_big">图片上传</text>
+            </i-col>
+          </i-row>
+          <view class="weui-uploader__bd">
+            <view class="weui-uploader__files" id="uploaderFiles">
+              <block wx:for="{{files}}" wx:key="*this">
+                <view class="weui-uploader__file uploader_img" bindtap="previewImage" id="{{item}}">
+                  <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                </view>
+              </block>
+            </view>
+            <view class="weui-uploader__input-box uploader_panel">
+              <view class="weui-uploader__input" bindtap="chooseImage"></view>
+            </view>
+          </view>
+        </view>
+      </view>  
+    </block>
+  </view>
+
+   <!--提交-->
+    <view class="bottom_panel">
+      <i-button bind:click="handle" type="success" i-class="kind_btn">提交</i-button>
+    </view>
+ </view>       

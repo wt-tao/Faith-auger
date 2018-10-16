@@ -1,0 +1,48 @@
+<view class="page">
+  <!--人员分配-->
+  <view class="page_bg"></view>
+
+  <!--搜索-->
+  <view class="page_bd_search">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="icon-search_in-box" type="search" size="16"></icon>
+        <input type="text" class="search-bar_input" placeholder="输入关键词查询" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+      </view>
+    </view>
+  </view>
+
+  <!--分配人员列表-->
+  <view class="page_bd_midden">
+    <!--人员选择-->
+    <view class="list_item_bottom">
+      <view class="item">
+        <i-row>
+          <i-col span="20" offset="3" i-class="col-class">
+            <text class="text_big">人员选择</text>
+          </i-col>
+        </i-row>
+      </view>
+      <view class="item item_line_height">
+        <block>
+          <i-row>
+            <checkbox-group bindchange="distributionChange">
+              <label wx:for="{{distribution}}">
+                <i-col span="6" offset="1" i-class="col-class">
+                  <checkbox value="{{item.name}}" checked="{{item.checked}}" color='orange'>
+                    <text class="text_midden">{{item.name}}</text>
+                  </checkbox>
+                </i-col>
+              </label>
+            </checkbox-group>
+          </i-row>
+        </block>
+      </view>
+    </view>
+  </view>
+  
+    <!--人员选择提交-->
+    <view class="bottom_panel">
+      <i-button bind:click="handle" type="success" i-class="kind_btn">提交</i-button>
+    </view>
+</view>

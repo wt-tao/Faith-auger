@@ -1,0 +1,85 @@
+/*##安装人员##*/
+.page_bg{
+  width: 100%;
+  height: 150rpx;
+  background: #0099FF 
+}
+/*tabBar*/
+.order-navbar_title {
+  display: inline-block;
+  font-size: 15px;
+  width: 130rpx;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+.order-navbar_slider {
+  position: absolute;
+  content: " ";
+  left: 0;
+  bottom: 0;
+  width: 90px;
+  height: 3px;
+  background-color: #1aad19;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+/*安装订单列表*/
+.page_bd_midden {
+  position: absolute;
+  top: 160rpx;
+  left: 10rpx;
+  right: 10rpx;
+}
+.button-sp-area{
+    width:100%;
+    height:70rpx;
+    line-height: 60rpx;
+}
+
+/*维修和保养订单列表*/
+.page_sweep_midden{
+  position: absolute;
+  top: 160rpx;
+  left: 10rpx;
+  right: 10rpx;
+}
+.sweep_panel{
+  height:140rpx; 
+  margin: 20rpx 0;
+  background-color: #F0F0F0;
+  border-radius: 10rpx;
+  overflow: hidden; 
+  display: flex;
+  justify-content: center;
+}
+.page_bd_option_midden {
+  position: absolute;
+  top: 360rpx;
+  left: 10rpx;
+  right: 10rpx;
+}
+.bg_icon {
+  position: absolute;
+  top: 15rpx;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+}
+.img_icon {
+  position: relative;
+  margin: 15rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #d0d0d0;
+}
+
+
+
+

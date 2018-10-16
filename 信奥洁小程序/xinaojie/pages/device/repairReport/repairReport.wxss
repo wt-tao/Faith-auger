@@ -1,0 +1,18 @@
+/*维修订单报告顶部*/
+.page_bd_spacing {
+   position: absolute;
+   top:60rpx;
+   left:10rpx;
+   right:10rpx;   
+}
+/*维修订单报告中部*/
+.uploader_panel{
+  position: relative;
+  margin:  20rpx 20rpx; 
+}
+.uploader_img{
+  position: relative;
+  margin:  20rpx 15rpx; 
+}
+
+

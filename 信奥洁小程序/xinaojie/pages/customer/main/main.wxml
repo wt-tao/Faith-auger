@@ -1,0 +1,28 @@
+<view class="page">
+  <!--客服首页按钮-->
+  <view class="page_bd_spacing">
+    <i-button bind:click="repairApply" type="success" i-class="coustomer_btn">
+      <text class="apply_text">维修申请</text>
+    </i-button>
+  </view>
+  <view class="page_bd_midden">
+    <i-button bind:click="maintenanceApply" type="warning" i-class="coustomer_btn">
+        <text class="apply_text">保养申请</text>
+    </i-button>
+  </view>
+  <!--客服首页底部-->
+  <view class="customer_bottom_panel">
+   <view class="item_block item_hd" bindtap='main'>
+      <image class="bottom_img" src="../../../image/main1.png" />
+      <view class="bottom_text" style="color:#59BBEA;">首页</view>
+    </view>
+    <view class="item_block item_hd" bindtap='myRepair'>
+      <image class="bottom_img" src="../../../image/repair.png" />
+      <view class="bottom_text">我的维修单</view>
+    </view>
+    <view class="item_block item_hd" bindtap='myMaintenance'>
+      <image class="bottom_img" src="../../../image/baoyang.png" />
+      <view class="bottom_text">我的保养单</view>
+    </view>
+  </view>
+</view>

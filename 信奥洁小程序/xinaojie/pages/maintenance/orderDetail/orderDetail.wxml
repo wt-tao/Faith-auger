@@ -1,0 +1,113 @@
+<view class="page">
+  <!--订单详情列表顶部-->
+  <view class="page_bg"></view>
+
+  <!--订单详情列表内容-->
+  <view class="page_bd_head">
+    <block>
+      <view class="list_item">
+        <!--订单号下单时间-->
+        <view class="item_border_bottom">
+          <i-row>
+            <i-col span="10" offset="1" i-class="col-class">
+              <text class="text_small">订单号：10203212</text>
+            </i-col>
+            <i-col span="12" offset="1" i-class="col-class">
+              <text class="text_small">下单时间：2018-09-22</text>
+            </i-col>
+          </i-row>
+        </view>
+        <!--订单内容-->
+        <view class="item_border_bottom item_line_height">
+          <i-row>
+            <i-col span="20" offset="1" i-class="col-class">
+              <text class="text_big">设备信息</text>
+            </i-col>
+          </i-row>
+          <i-row>
+            <i-col span="20" offset="1" i-class="col-class">
+              <text class="text_midden_label">设备名称：</text>
+              <text class="text_midden">飞利浦核磁共振仪</text>
+            </i-col>
+          </i-row>
+          <i-row>
+            <i-col span="20" offset="1" i-class="col-class">
+              <text class="text_midden_label" decode="{{true}}" space="{{true}}">型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</text>
+              <text class="text_midden">P230-14532</text>
+            </i-col>
+          </i-row>
+          <i-row>
+            <i-col span="20" offset="1" i-class="col-class">
+              <text class="text_midden_label"> 安装时间：</text>
+              <text class="text_midden">2018-09-17</text>
+            </i-col>
+          </i-row>
+          <i-row>
+            <i-col span="20" offset="1" i-class="col-class">
+              <text class="text_midden_label"> 上次保养：</text>
+              <text class="text_midden">2018-09-17</text>
+            </i-col>
+          </i-row>
+        </view>
+        <!--订单故障描述-->
+        <view class="item">
+          <i-row>
+            <i-col span="20" offset="1" i-class="col-class">
+              <text class="text_big">故障描述</text>
+            </i-col>
+          </i-row>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!--附件-->
+  <view class="page_bd_midden">
+    <block wx:for="{{list}}" wx:key="id">
+      <view class="list_item">
+        <view class="item">
+          <i-row>
+            <i-col span="12" offset="1" i-class="col-class">
+              <text class="text_big">所需附件</text>
+            </i-col>
+            <i-col span="3" offset="8" i-class="col-class">
+             <image data-param="1" class="icon" src="{{isShowFrom1 ? '../../../image/jiantoushang.png' : '../../../image/jiantouxia.png'}}" bindtap="showFrom" />
+            </i-col>
+          </i-row>
+        </view>
+          <view class="{{isShowFrom1 ? '' : 'kind-list_item-bd_show'}}">
+            <view class="item">暂无附件</view> 
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!--订单列表详情底部-->
+  <view class="bottom_panel">
+    <i-button bind:click="handle" type="success" i-class="kind_btn">选择配件</i-button>
+  </view>
+</view>
+
+<!--分配人员弹框-->
+<view class="distribution_mask" bindtap="hideModal" wx:if="{{showModal}}"></view>
+<view class="distribution_dialog item_line_height" wx:if="{{showModal}}">
+  <i-row>
+    <i-col span="6" offset="2" i-class="col-class">
+      <text class="text_big">分配人员</text>
+      </i-col>
+  </i-row>
+  <view class="distribution_content">
+    <i-row>
+      <checkbox-group bindchange="distributionChange">
+        <label wx:for="{{distribution}}">
+          <i-col span="6" offset="1" i-class="col-class">
+            <checkbox value="{{item.name}}" checked="{{item.checked}}" color='orange'>
+              <text class="modal_text_context">{{item.name}}</text>
+            </checkbox>
+          </i-col>
+        </label>
+      </checkbox-group>
+    </i-row>
+    <i-button bind:click="handleConfirm" type="success" i-class="button-sp-area">提交</i-button>
+  </view>
+</view>

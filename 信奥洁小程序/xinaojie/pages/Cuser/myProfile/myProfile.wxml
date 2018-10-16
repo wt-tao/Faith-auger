@@ -1,0 +1,45 @@
+<view class="page">
+  <!--我的资料顶部-->
+  <image src="../../../image/loginbg.jpg" class="page_big_bg"></image>
+  <view class="page_top">
+    <view class="img_icon">
+      <view class="icon">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+    </view>
+    <text class="number">会员号：13683435609</text>
+    <text class="date">注册时间：2018-09-17</text>
+  </view>
+
+  <!--资料详情-->
+  <view class="detail_panel">
+    <view class="page_detail">
+      <view style="margin-top:20rpx">
+        <view class="weui-cell">
+          <view class="weui-cell__bd list-text">单位名称</view>
+          <view class="weui-cell__ft">
+            <text>广州市人民医院</text>
+          </view>
+        </view>
+         <view class="weui-cell">
+          <view class="weui-cell__bd list-text">所在科室</view>
+          <view class="weui-cell__ft">
+            <text>影响科</text>
+          </view>
+        </view>
+         <view class="weui-cell" hover-class="weui-cell_active" bindtap="bindName">
+          <view class="weui-cell__bd list-text">会员姓名</view>
+          <view class=" weui-cell__ft_in-access">
+            <text>吴欣阳</text>
+          </view>
+        </view>
+        <view class="weui-cell" hover-class="weui-cell_active">
+          <view class="weui-cell__bd list-text">绑定手机</view>
+          <view class=" weui-cell__ft_in-access">
+            <text>13683435609</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,84 @@
+<view class="page">
+  <!--配件回收顶部-->
+  <view class="page_bg"></view>
+  <view class="page_bd_spacing">
+    <block>
+      <view class="list_item_bottom">
+        <!--订单号下单时间-->
+        <view class="item_border_bottom item_line_height">
+          <i-row>
+            <i-col span="10" i-class="col-class">
+              <text class="text_small">订单号：10203212</text>
+            </i-col>
+            <i-col span="12" offset="1" i-class="col-class">
+              <text class="text_small">下单时间：2018-09-22</text>
+            </i-col>
+          </i-row>
+        </view>
+
+        <!--回收清单名称-->
+        <view class="item_border_bottom item_line_height">
+          <i-row>
+            <i-col span="20" i-class="col-class">
+              <text class="text_big">外科手术台-报告</text>
+            </i-col>
+          </i-row>
+          <i-row>
+            <i-col span="22" i-class="col-class">
+              <text class="text_midden_label">配送地址：</text>
+              <text class="text_midden">成都市一环路西一段2号四川人民手术室</text>
+            </i-col>
+          </i-row>
+        </view>
+
+        <!--退货配件-->
+        <view class="item item_line_height">
+          <i-row>
+            <i-col span="20" i-class="col-class">
+              <text class="text_big">退货配件</text>
+            </i-col>
+          </i-row>
+        </view>
+        <view class="kind-list_item-hd " wx:for="{{tool}}">
+          <view class="item_tool">
+            <i-row>
+              <checkbox-group bindchange="change">
+                <i-col span="2" i-class="col-class">
+                  <text class=" text_midden_label">{{item.Tid}}</text>
+                </i-col>
+                <i-col span="8" offset="2" i-class="col-class">
+                  <text class=" text_midden_label">{{item.name}}</text>
+                </i-col>
+                <i-col span="4" offset="4" i-class="col-class">
+                  <text class=" text_midden_label">3个</text>
+                </i-col>
+                <i-col span="3" offset="1" i-class="col-class">
+                  <checkbox value="{{item.name}}" checked="{{item.checked}}" color='orange'></checkbox>
+                </i-col>
+              </checkbox-group>
+            </i-row>
+          </view>
+        </view>
+
+        <!--备注-->
+        <view class="item_border_bottom">
+          <i-row>
+            <i-col span="20" i-class="col-class">
+              <text class="text_big">备注</text>
+            </i-col>
+          </i-row>
+         <view class="item">
+            <textarea class="kind_border_textArea text_midden" placeholder='请输入备注信息' maxlength="{{max}}" bindinput="inputs">
+              <view class="currentWordNumber">{{currentWordNumber|0}}/{{max}}</view>
+            </textarea>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+   <!--入库-->
+    <view class="bottom_panel">
+      <i-button bind:click="handle" type="success" i-class="kind_btn">入库</i-button>
+    </view>
+</view>

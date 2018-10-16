@@ -1,0 +1,7 @@
+{
+  "navigationBarBackgroundColor": "#0099FF",
+  "navigationBarTitleText": "首页",
+  "usingComponents": {
+    "i-button": "../../../dist/button/index"
+  }
+}

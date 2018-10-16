@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#0099FF",
+  "navigationBarTitleText": "配件回收",
+  "usingComponents": {
+    "i-row": "../../../../dist/row/index",
+    "i-col": "../../../../dist/col/index",
+    "i-button": "../../../../dist/button/index"
+  }
+}

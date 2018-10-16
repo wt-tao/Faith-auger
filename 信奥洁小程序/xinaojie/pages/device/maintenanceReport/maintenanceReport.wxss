@@ -1,0 +1,37 @@
+/*保养订单报告顶部*/
+.page_bd_spacing {
+   position: absolute;
+   top:60rpx;
+   left:10rpx;
+   right:10rpx;   
+}
+/*保养订单报告中部*/
+.uploader_panel{
+  position: relative;
+  margin:  20rpx 20rpx; 
+}
+.uploader_img{
+  position: relative;
+  margin:  20rpx 15rpx; 
+}
+.icon {
+  width: 60rpx;
+  height: 60rpx;
+}
+.item_tool {
+  width: 100%;
+  height: 80rpx;
+  border-bottom: 1px solid #e0e0e0;
+}
+.number{
+  border: 1px solid #e0e0e0;
+}
+.selectAll {
+  position: relative;
+  margin-left: 69%;
+}
+.selectCancel {
+  position: relative;
+  margin-left: 56%;
+}
+
